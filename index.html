@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redwood City Council: Who's Taking Real Estate Money While Renters Ask for Protection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --header: #d4500a;
+    --accent: #ff8a3d;
+    --accent-dark: #ff8a3d;
+    --amber: #fbdcc4;
+    --ink: #1c1917;
+    --stone: #44403c;
+    --muted: #5f5953;
+    --bg: #ffffff;
+    --panel: #f5f0eb;
+    --border: #e7e0d8;
+    --warn: #b8430a;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: var(--header);
+    color: white;
+    padding: 12% 5% 5%;
+    overflow: hidden;
+  }
+
+  header .inner {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  header .kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-bottom: 18px;
+  }
+
+  header h1 {
+    font-size: clamp(38px, 5.2vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 22px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    max-width: 800px;
+  }
+
+  header p {
+    font-size: 26px;
+    max-width: 720px;
+    opacity: 0.95;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  .jump-bar {
+    background: var(--accent-dark);
+    height: 40px;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 24px 10px;
+  }
+
+  section { margin-bottom: 56px; }
+
+  section h2 {
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+
+  .intro p {
+    font-size: 16px;
+    color: var(--ink);
+    max-width: 720px;
+  }
+
+  .intro .disclaimer {
+    background: var(--panel);
+    border-left: 4px solid var(--accent);
+    padding: 14px 18px;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 16px;
+  }
+
+  .council-section {
+    position: relative;
+    padding-top: 24px;
+    padding-bottom: 16px;
+  }
+ 
+  .council-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: none;
+    z-index: -1;
+  }
+
+  .council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 8px 0 28px;
+    padding: 0;
+    max-width: 760px;
+  }
+
+  .section-title span {
+    background: linear-gradient(transparent 58%, var(--amber) 58%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0 4px;
+  }
+
+  .card {
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 6px 6px 0 var(--amber);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px 0;
+  }
+
+  .card .photo {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9a9da3;
+    border: 3px solid var(--ink);
+    font-size: 9px;
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden;
+  }
+
+  .card .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card .body {
+    padding: 12px 20px 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card h3 {
+    margin: 0 0 2px;
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .card .district {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .stat-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 0 2px 12px;
+    margin: 4px 0 14px;
+    border-left: 6px solid #d6d3cf;
+  }
+
+  .stat-row::after {
+    content: "Total received";
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .stat-row .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: white;
+    font-weight: 700;
+  }
+
+  .stat-row .value {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    font-style: normal;
+  }
+
+  .card .donor-list .placeholder {
+    color: var(--ink);
+    font-style: normal;
+  }
+
+  .card .donor-list li { gap: 12px; }
+
+  .card .donor-list li span:last-child {
+    white-space: nowrap;
+    color: var(--ink);
+    font-weight: 800;
+  }
+
+  .field-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  .field-value {
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+
+  .council-text p {
+    font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+    text-align: right;
+    margin: 0;
+    color: var(--ink);
+    padding: 0px 0px;
+    text-shadow: 2px 2px 0 #d6d3cf;
+  }
+
+  .council-text .source {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    text-shadow: none;
+    letter-spacing: 0;
+    line-height: 1.5;
+    margin-top: 8px;
+  }
+
+  .donor-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .donor-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  .donor-list li:last-child { border-bottom: none; }
+
+  .placeholder {
+    color: #9a9da3;
+    font-style: italic;
+  }
+
+  .glossary-section {
+    color: white;
+    padding: 48px 4px 0px 0px;
+    border-radius: 8px;
+  }
+
+
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  @media (max-width: 860px) {
+    .glossary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 480px) {
+    .glossary-grid { grid-template-columns: 1fr; }
+  }
+
+  .glossary-sources {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 18px 0 0;
+    max-width: 760px;
+  }
+
+  .glossary-item {
+    padding: 14px 16px 22px;
+    background: white;
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px var(--header);
+  }
+
+  .glossary-item h4 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 800;
+    font-style: italic;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ink);
+    color: var(--ink);
+  }
+
+  .glossary-item p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--ink);
+  }
+
+  .background-item {
+    margin-bottom: 20px;
+  }
+
+  .background-item h4 {
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0 0 6px;
+  }
+
+  .background-item p {
+    font-size: 14px;
+    color: var(--ink);
+    margin: 0;
+    max-width: 720px;
+  }
+
+  /* Top spenders figure */
+
+  .spend-figure {
+    margin-top: 64px;
+    padding: 24px 28px 20px;
+    background: white;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .spend-figure { padding: 20px 16px 16px; }
+  }
+
+  .spend-figure h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 4px;
+  }
+
+  .bar-plot {
+    position: relative;
+    border-left: 3px solid var(--ink);
+    padding: 6px 0 4px;
+  }
+
+  .bar-row {
+    margin-bottom: 18px;
+  }
+
+  .bar-row:last-child { margin-bottom: 8px; }
+
+  .bar-name {
+    font-size: 14px;
+    font-weight: 700;
+    padding-left: 12px;
+    margin-bottom: 6px;
+  }
+
+  .bar-row.other .bar-name {
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  .bar-track {
+    height: 44px;
+    padding-right: 6px;
+  }
+
+  .bar {
+    height: 100%;
+    width: 0;
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 14px;
+    transition: width 1.1s cubic-bezier(.2, .8, .2, 1);
+  }
+
+  .bar-row.ig .bar {
+    background: var(--accent-dark);
+    box-shadow: 4px 4px 0 var(--header);
+  }
+
+  .bar-row.other .bar {
+    background: #d6d3cf;
+  }
+
+  .bar-value {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--ink);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.8s;
+  }
+
+  .bar-row.other .bar-value {
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  .spend-figure.is-visible .bar { width: var(--w); }
+  .spend-figure.is-visible .bar-value { opacity: 1; }
+
+  .bar-axis {
+    position: relative;
+    height: 22px;
+    border-top: 3px solid var(--ink);
+    margin-right: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .bar-axis span {
+    position: absolute;
+    top: 6px;
+    transform: translateX(-50%);
+  }
+
+  .bar-axis span:first-child { transform: none; }
+
+  .axis-title {
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-top: 8px;
+  }
+
+  .figure-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+
+  .figure-callout {
+    position: absolute;
+    top: 122px;
+    right: 48px;
+    width: 42%;
+    margin: 0;
+    padding: 16px 20px;
+    background: white;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--header);
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    z-index: 1;
+  }
+
+  @media (max-width: 640px) {
+    .figure-callout {
+      position: static;
+      width: auto;
+      margin: 0 6px 22px 12px;
+      font-size: 18px;
+    }
+  }
+
+  /* Opposition funding section */
+
+  .opp-section {
+    position: relative;
+    padding: 56px 0 48px;
+    margin-bottom: 0;
+  }
+
+  .opp-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: var(--header);
+    z-index: -1;
+  }
+
+  main > section:first-of-type { margin-bottom: 0; }
+
+  .amber-section {
+    position: relative;
+    padding: 40px 0 64px;
+    margin-bottom: 0;
+  }
+
+  .amber-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: linear-gradient(to bottom, #ffffff 0%, var(--amber) 100%);
+    z-index: -1;
+  }
+
+  .opp-section { padding: 0 0 64px; }
+
+  main { padding-bottom: 0; }
+
+  .opp-lede { color: white; }
+
+  .opp-section .council-text {
+    position: relative;
+    padding: 48px 0 0;
+  }
+
+  .opp-section .opp-lede { margin-top: 16px; }
+
+  .opp-section .council-text p {
+    text-align: left;
+    color: white;
+    text-shadow: none;
+  }
+
+  .opp-figure { background: white; border-color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+
+  .opp-lede {
+    font-size: 19px;
+    line-height: 1.45;
+    max-width: 760px;
+    margin: 28px 0 0;
+  }
+
+  .opp-lede strong { background: white; color: var(--header); padding: 0 4px; }
+
+  .measure-tag {
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .opp-figure { margin-top: 36px; }
+
+  .share-total {
+    font-size: 15px;
+    margin: 0 0 12px;
+  }
+
+  .share-total strong { font-size: 30px; font-weight: 800; color: var(--warn); margin-right: 6px; }
+
+  .share-bar {
+    display: flex;
+    gap: 2px;
+    height: 56px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--panel);
+  }
+
+  .share-bar span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .seg-caa { background: var(--header); color: white; }
+  .seg-car { background: var(--accent); color: var(--ink); }
+  .seg-hv { background: var(--ink); color: white; }
+  .seg-other { background: #d6d3cf; color: var(--muted); }
+
+  .opp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  @media (max-width: 760px) {
+    .opp-grid { grid-template-columns: 1fr; }
+  }
+
+  .opp-card {
+    background: var(--panel);
+    border-radius: 8px;
+    border-top: 8px solid var(--swatch);
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .opp-card h4 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .opp-card .opp-amount {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--warn);
+    line-height: 1.1;
+  }
+
+  .opp-card .opp-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .opp-card .donor-list { font-size: 13px; }
+  .opp-card .donor-list li { gap: 12px; }
+
+  .opp-then {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+    font-size: 13px;
+  }
+
+  .opp-then strong { font-size: 15px; }
+
+  .others-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 14px 0 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bar, .bar-value { transition: none; }
+  }
+
+  footer {
+    background: white;
+    padding: 14px 14px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div>
+      <div class="kicker">whofundsrwc.com &middot; <span id="kicker-date"></span></div>
+      <h1>
+        The RWC City Council has accepted tens of thousands of dollars from corporate landlords and real estate lobbyists.
+      </h1>
+      <p>
+        A grassroots measure to strengthen renter protections, Measure E, has fallen on deaf ears at city hall. It turns out the council's biggest donors are the real estate interests that oppose it.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <div class="council-section">
+      <h2 class="section-title"><span>Which councilmembers have taken the most money from the landlord lobby?</span></h2>
+      <div class="council-grid">
+
+        <!-- Template note: duplicate one .card block per councilmember. -->
+
+        <!-- <div class="card">
+          
+          <div class="header-row">
+            <div class="photo"><img src="photos/saballos.jpg" alt="Elmer Martínez Saballos"></div>
+            <div>
+              <h3>Elmer Martínez Saballos</h3>
+              <div class="district" style="margin-bottom:0;">District 4 &middot; Mayor</div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$0,000</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+            </ul>
+          </div>
+
+        </div> -->
+
+        <!-- <div class="card">
+          
+          <div class="header-row">
+            <div class="photo"><img src="photos/eakin.jpg" alt="Kaia Eakin"></div>
+            <div>
+              <h3>Kaia Eakin</h3>
+              <div class="district" style="margin-bottom:0;">District 5 &middot; Vice Mayor</div>
+            </div>
+          </div>
+
+          <div class="body">
+
+            <div class="stat-row">
+              <span class="value placeholder">$0,000</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+            </ul>
+          </div>
+
+        </div> -->
+
+        <!-- <div class="card">
+          
+          <div class="header-row">
+            <div class="photo"><img src="photos/sturken.jpg" alt="Chris Sturken"></div>
+            <div>
+              <h3>Chris Sturken</h3>
+              <div class="district" style="margin-bottom:0;">District 2</div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$0,000</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+              <li><span class="placeholder">Donor name</span><span class="placeholder">$0,000</span></li>
+            </ul>
+          </div>
+          
+        </div> -->
+
+        <div class="card">
+
+          <div class="header-row">
+            <div class="photo"><img src="photos/gee.jpg" alt="Jeff Gee"></div>
+            <div>
+              <h3>Jeff Gee</h3>
+              <div class="district" style="margin-bottom:0;">District 1</div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$50,733</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">Harbor Village Mobile Home Park</span><span class="placeholder">$8,500</span></li>
+              <li><span class="placeholder">California Real Estate PAC (CREPAC)</span><span class="placeholder">$5,500</span></li>
+              <li><span class="placeholder">Western Manufactured Housing Communities Association PAC</span><span class="placeholder">$2,600</span></li>
+              <li><span class="placeholder">California Apartment Association PAC (CAAPAC)</span><span class="placeholder">$2,250</span></li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="card">
+
+          <div class="header-row">
+            <div class="photo"><img src="photos/howard.jpg" alt="Diane Howard"></div>
+            <div>
+              <h3>Diane Howard</h3>
+              <div class="district" style="margin-bottom:0;">District 6</div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$32,798</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">California Real Estate PAC (CREPAC)</span><span class="placeholder">$6,450</span></li>
+              <li><span class="placeholder">Harbor Village Mobile Home Park</span><span class="placeholder">$3,500</span></li>
+              <li><span class="placeholder">California Apartment Association PAC (CAAPAC)</span><span class="placeholder">$3,000</span></li>
+              <li><span class="placeholder">John Shroyer, Sotheby's International Realty</span><span class="placeholder">$3,000</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          
+          <div class="header-row">
+            <div class="photo"><img src="photos/chu.jpg" alt="Isabella Chu"></div>
+            <div>
+              <h3>Isabella Chu</h3>
+              <div class="district" style="margin-bottom:0;">District 3</div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$9,521</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">Harbor Village Mobile Home Park</span><span class="placeholder">$3,995</span></li>
+              <li><span class="placeholder">National Association of Realtors Fund</span><span class="placeholder">$2,026</span></li>
+              <li><span class="placeholder">California Real Estate PAC (CREPAC)</span><span class="placeholder">$2,000</span></li>
+              <li><span class="placeholder">California Apartment Association PAC (CAAPAC)</span><span class="placeholder">$500</span></li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="card">
+          
+          <div class="header-row">
+            <div class="photo"><img src="photos/padilla.jpg" alt="Marcella Padilla"></div>
+            <div>
+              <h3>Marcella Padilla</h3>
+              <div class="district" style="margin-bottom:0;">District 7</div>
+            </div>
+          </div>
+
+          <div class="body">
+            <div class="stat-row">
+              <span class="value placeholder">$4,987</span>
+            </div>
+            <div class="field-label">Notable Donors</div>
+            <ul class="donor-list">
+              <li><span class="placeholder">National Association of Realtors Fund</span><span class="placeholder">$2,187</span></li>
+              <li><span class="placeholder">California Real Estate PAC (CREPAC)</span><span class="placeholder">$1,000</span></li>
+              <li><span class="placeholder">Harbor Village Mobile Home Park</span><span class="placeholder">$1,000</span></li>
+              <li><span class="placeholder">Kathy Zmay Real Estate</span><span class="placeholder">$350</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="amber-section">
+    <div class="council-text">
+      <p>Out-of-town corporations own the vast majority of rental properties in our city<sup style="font-size: 0.45em; vertical-align: 0.85em;">$</sup>. Their lobbyists spend big to influence local elections.</p>
+      <p class="source"><sup>$</sup> Anti-Eviction Mapping Project. 2024. "Who Owns Redwood City's Rental Housing?"</p>
+    </div>
+
+    <!-- Top spenders figure. Bar width = amount / 45,000 (the axis max). -->
+    <figure class="spend-figure" id="spend-figure" style="margin-left:0; margin-right:0;">
+      <h3>Top 5 Spenders in Redwood City Council Elections: 2018 to 2024</h3>
+      <p class="figure-note">Includes contributions and independent expenditures in Redwood City City Council elections from 2018, 2020, 2022, and 2024.</p>
+
+      <div class="bar-plot">
+        <p class="figure-callout">The three biggest spenders in recent elections are corporate landlords and real estate PACs.</p>
+        <div class="bar-row ig">
+          <div class="bar-name">California Apartment Association PAC (CAAPAC)</div>
+          <div class="bar-track"><div class="bar" style="--w: 91.35%;"><span class="bar-value">$41,105</span></div></div>
+        </div>
+        <div class="bar-row ig">
+          <div class="bar-name">California Real Estate PAC (CREPAC)</div>
+          <div class="bar-track"><div class="bar" style="--w: 44.44%;"><span class="bar-value">$20,000</span></div></div>
+        </div>
+        <div class="bar-row ig">
+          <div class="bar-name">Harbor Village Mobile Home Park</div>
+          <div class="bar-track"><div class="bar" style="--w: 44.43%;"><span class="bar-value">$19,995</span></div></div>
+        </div>
+        <div class="bar-row other">
+          <div class="bar-name">Julie Pardini</div>
+          <div class="bar-track"><div class="bar" style="--w: 44.38%;"><span class="bar-value">$19,969</span></div></div>
+        </div>
+        <div class="bar-row ig">
+          <div class="bar-name">National Association of Realtors Fund</div>
+          <div class="bar-track"><div class="bar" style="--w: 37.38%;"><span class="bar-value">$16,822</span></div></div>
+        </div>
+      </div>
+
+      <div class="bar-axis" aria-hidden="true">
+        <span style="left: 0%;">$0</span>
+        <span style="left: 22.22%;">$10k</span>
+        <span style="left: 44.44%;">$20k</span>
+        <span style="left: 66.67%;">$30k</span>
+        <span style="left: 88.89%;">$40k</span>
+      </div>
+      <div class="axis-title">Total spend</div>
+    </figure>
+
+    <div class="glossary-section">
+      <div class="glossary-grid">
+        <div class="glossary-item">
+          <h4>California Apartment Association PAC (CAAPAC)</h4>
+          <p>The political action committee of California's largest landlord and property manager trade group, funded by its rental-industry members.</p>
+        </div>
+        
+        <div class="glossary-item">
+          <h4>National Association of Realtors Fund</h4>
+          <p>The campaign spending arm of the National Association of Realtors, which outspent every other organization in the country on federal lobbying in 2024<sup style="font-size: 0.75em;">*</sup>. Locally, it can spend unlimited sums on ads for candidates it favors.</p>
+        </div>
+
+        <div class="glossary-item">
+          <h4>California Real Estate PAC (CREPAC)</h4>
+          <p>The PAC of the California Association of Realtors, which poured at least $19 million into defeating Prop 33<sup style="font-size: 0.75em;">&dagger;</sup>, the statewide 2024 ballot measure that would have let cities expand rent control.</p>
+        </div>
+
+        <div class="glossary-item">
+          <h4>Harbor Village Mobile Home Park</h4>
+          <p>Residents of this 300-lot park own their homes but rent the land beneath them, leaving them few options when lot rents rise. Its owner, Marjal Corp., is part of a group of statewide property management firms operated by Albert Engel.</p>
+        </div>
+
+      </div>
+      <p class="glossary-sources"><sup>*</sup> OpenSecrets federal lobbying data, 2024, as reported by Real Estate News, "NAR spent more on lobbying than any other group in 2024," Feb. 14, 2025. <sup>&dagger;</sup> Jeremia Kimelman, "This California proposition is drawing the most campaign spending," CalMatters, Oct. 29, 2024.</p>
+    </div>
+
+  </section>
+
+  <section class="opp-section">
+    <div class="council-text">
+      <p>The same landlord money that backed our council is now bankrolling the fight against renter protections.</p>
+    </div>
+
+    <p class="opp-lede">Between 2018 and 2024, the three biggest spenders in council races put $81,100 into getting their candidates elected. In just over a month this fall, those same three interests have poured <strong>$150,000</strong> into defeating <span class="measure-tag">Measure E</span>, the ballot measure to strengthen renter protections in Redwood City.</p>
+
+    <figure class="spend-figure opp-figure" style="margin-left:0; margin-right:0;">
+      <h3>Who's Funding the Opposition to Renter Protections</h3>
+      <p class="figure-note">Contributions to the committee opposing this year's Measure E, August 24 to September 26, 2026.</p>
+
+      <p class="share-total"><strong>$150,000</strong>of $175,247 raised came from the big 3</p>
+      <div class="share-bar" role="img" aria-label="California Apartment Association 54%, California Association of Realtors 23%, Harbor Village and owner 9%, all other donors 14%">
+        <span class="seg-caa" style="width: 54.21%;">54%</span>
+        <span class="seg-car" style="width: 22.83%;">23%</span>
+        <span class="seg-hv" style="width: 8.56%;">9%</span>
+        <span class="seg-other" style="width: 14.41%;">14%</span>
+      </div>
+
+      <div class="opp-grid">
+        <div class="opp-card" style="--swatch: var(--header);">
+          <h4>California Apartment Association</h4>
+          <div class="opp-amount">$95,000</div>
+          <div class="opp-sub">against renter protections</div>
+        </div>
+
+        <div class="opp-card" style="--swatch: var(--accent);">
+          <h4>California Association of Realtors</h4>
+          <div class="opp-amount">$40,000</div>
+          <div class="opp-sub">against renter protections</div>
+        </div>
+
+        <div class="opp-card" style="--swatch: var(--ink);">
+          <h4>Harbor Village &amp; Its Owner</h4>
+          <div class="opp-amount">$15,000</div>
+          <div class="opp-sub">against renter protections</div>
+        </div>
+      </div>
+
+      <p class="others-note">The remaining $25,247 came from 10 other donors, most of them tied to real estate and property management.</p>
+    </figure>
+  </section>
+
+
+</main>
+
+<footer>
+  <p>Redwood City campaign finance data is publicly viewable and downloadable at <span style="text-decoration: underline;">https://documents.redwoodcity.org/publicweblink/browse.aspx</span> and <span style="text-decoration: underline;">https://netfile.com/public/RWC/campaign</span>. Unless otherwise noted, all figures on this page are derived from these public filings.</p>
+</footer>
+
+<script>
+  document.getElementById('kicker-date').textContent = new Date().toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long'
+  });
+
+  (function () {
+    var fig = document.getElementById('spend-figure');
+    if (!('IntersectionObserver' in window)) { fig.classList.add('is-visible'); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { fig.classList.add('is-visible'); io.disconnect(); }
+      });
+    }, { threshold: 0.3 });
+    io.observe(fig);
+  })();
+</script>
+
+</body>
+</html>
