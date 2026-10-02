@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Who Funds RWC</title>
+<title>Who Funds RWC | The Corporate Landlord Lobby in Redwood City Elections</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   header {
     background: var(--header);
     color: white;
-    padding: 12% 5% 5%;
+    padding: 12% 5% 9%;
     overflow: hidden;
   }
 
@@ -705,6 +705,16 @@
     .bar, .bar-value { transition: none; }
   }
 
+  /* Mobile type scale */
+  @media (max-width: 640px) {
+    header { padding: 56px 6% 56px; }
+    header h1 { font-size: 31px; margin-bottom: 16px; }
+    header p { font-size: 19px; line-height: 1.25; }
+    .section-title { font-size: 25px; }
+    .council-text p { font-size: 30px; }
+    .opp-section .council-text { padding-top: 36px; }
+  }
+
   footer {
     background: white;
     padding: 14px 14px;
@@ -822,7 +832,7 @@
 
           <div class="body">
             <div class="stat-row">
-              <span class="value placeholder">$49,233</span>
+              <span class="value placeholder">$50,733</span>
             </div>
             <div class="field-label">Notable Donors</div>
             <ul class="donor-list">
@@ -962,23 +972,24 @@
           <p>The political action committee of California's largest landlord and property manager trade group, funded by its rental-industry members.</p>
         </div>
         
-        <div class="glossary-item">
-          <h4>National Association of Realtors Fund</h4>
-          <p>The campaign spending arm of the National Association of Realtors, which outspent every other organization in the country on federal lobbying in 2024<sup style="font-size: 0.75em;">*</sup>. Locally, it can spend unlimited sums on ads for candidates it favors.</p>
-        </div>
 
         <div class="glossary-item">
           <h4>California Real Estate PAC (CREPAC)</h4>
-          <p>The PAC of the California Association of Realtors, which poured at least $19 million into defeating Prop 33<sup style="font-size: 0.75em;">&dagger;</sup>, the statewide 2024 ballot measure that would have let cities expand rent control.</p>
+          <p>The PAC of the California Association of Realtors, which poured at least $19 million into defeating Prop 33<sup style="font-size: 0.75em;">*</sup>, the statewide 2024 ballot measure that would have let cities expand rent control.</p>
         </div>
 
         <div class="glossary-item">
           <h4>Harbor Village Mobile Home Park</h4>
-          <p>Residents of this 300-lot park own their homes but rent the land beneath them, leaving them few options when lot rents rise. Its owner, Marjal Corp., is part of a group of statewide property management firms operated by Albert Engel.</p>
+          <p>Residents of this 300-lot park own their homes but rent the land beneath them. Its owner, Marjal Corp., is part of a group of statewide property management firms operated by Albert Engel.</p>
+        </div>
+
+        <div class="glossary-item">
+          <h4>National Association of Realtors Fund</h4>
+          <p>The campaign spending arm of the National Association of Realtors, which outspent every other organization in the country on federal lobbying in 2024<sup style="font-size: 0.75em;">&dagger;</sup>. Locally, it can spend unlimited sums on ads for candidates it favors.</p>
         </div>
 
       </div>
-      <p class="glossary-sources"><sup>*</sup> OpenSecrets federal lobbying data, 2024, as reported by Real Estate News, "NAR spent more on lobbying than any other group in 2024," Feb. 14, 2025. <sup>&dagger;</sup> Jeremia Kimelman, "This California proposition is drawing the most campaign spending," CalMatters, Oct. 29, 2024.</p>
+      <p class="glossary-sources"><sup>*</sup> Jeremia Kimelman, "This California proposition is drawing the most campaign spending," CalMatters, Oct. 29, 2024. <sup>&dagger;</sup> OpenSecrets federal lobbying data, 2024, as reported by Real Estate News, "NAR spent more on lobbying than any other group in 2024," Feb. 14, 2025.</p>
     </div>
 
   </section>
@@ -1050,5 +1061,6 @@
   })();
 </script>
 
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8226fbdc8796430bb65f8145e792be49"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
