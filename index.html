@@ -64,6 +64,14 @@
     max-width: 800px;
   }
 
+  header h1 .hl {
+    background: white;
+    color: var(--header);
+    padding: 0 8px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
   header p {
     font-size: 26px;
     max-width: 720px;
@@ -140,6 +148,13 @@
     margin: 8px 0 28px;
     padding: 0;
     max-width: 760px;
+  }
+
+  .section-lede {
+    font-size: 19px;
+    line-height: 1.45;
+    max-width: 720px;
+    margin: -14px 0 28px;
   }
 
   .section-title span {
@@ -640,17 +655,22 @@
 
   .seg-caa { background: var(--header); color: white; }
   .seg-car { background: var(--accent); color: var(--ink); }
-  .seg-hv { background: var(--ink); color: white; }
+  .seg-nar { background: var(--ink); color: white; }
+  .seg-hv { background: var(--amber); color: var(--ink); }
   .seg-other { background: #d6d3cf; color: var(--muted); }
 
   .opp-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
     margin-top: 24px;
   }
 
-  @media (max-width: 760px) {
+  @media (max-width: 860px) {
+    .opp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media (max-width: 480px) {
     .opp-grid { grid-template-columns: 1fr; }
   }
 
@@ -701,6 +721,30 @@
     margin: 14px 0 0;
   }
 
+  .closing {
+    margin-top: 56px;
+    max-width: 760px;
+    color: white;
+  }
+
+  .closing h3 {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    display: inline-block;
+  }
+
+  .closing p {
+    font-size: 19px;
+    line-height: 1.45;
+    margin: 0 0 14px;
+  }
+
+  .closing strong { background: white; color: var(--header); padding: 0 4px; }
+
   @media (prefers-reduced-motion: reduce) {
     .bar, .bar-value { transition: none; }
   }
@@ -732,10 +776,10 @@
     <div>
       <div class="kicker">whofundsrwc.com &middot; <span id="kicker-date"></span></div>
       <h1>
-        The RWC City Council has accepted tens of thousands of dollars from corporate landlords and real estate lobbyists.
+        The RWC City Council has taken <span class="hl">tens of thousands of dollars</span> from corporate landlords and real estate lobbyists.
       </h1>
       <p>
-        A grassroots measure to strengthen renter protections, Measure E, has fallen on deaf ears at city hall. It turns out the council's biggest donors are the real estate interests that oppose it.
+        A grassroots measure to strengthen renter protections, Measure E, has fallen on deaf ears at city hall.
       </p>
     </div>
   </div>
@@ -745,7 +789,7 @@
 
   <section>
     <div class="council-section">
-      <h2 class="section-title"><span>Which councilmembers have taken the most money from the landlord lobby?</span></h2>
+      <h2 class="section-title"><span>Corporate landlords and the real estate lobby helped bankroll the RWC City Council.</span></h2>
       <div class="council-grid">
 
         <!-- Template note: duplicate one .card block per councilmember. -->
@@ -922,17 +966,17 @@
 
   <section class="amber-section">
     <div class="council-text">
-      <p>Out-of-town corporations own the vast majority of rental properties in our city<sup style="font-size: 0.45em; vertical-align: 0.85em;">$</sup>. Their lobbyists spend big to influence local elections.</p>
+      <p>Out-of-town corporations own the vast majority of rental properties in our city<sup style="font-size: 0.45em; vertical-align: 0.85em;">$</sup>. Their lobbyists are our city's biggest campaign spenders.</p>
       <p class="source"><sup>$</sup> Anti-Eviction Mapping Project. 2024. "Who Owns Redwood City's Rental Housing?"</p>
     </div>
 
     <!-- Top spenders figure. Bar width = amount / 45,000 (the axis max). -->
     <figure class="spend-figure" id="spend-figure" style="margin-left:0; margin-right:0;">
       <h3>Top 5 Spenders in Redwood City Council Elections: 2018 to 2024</h3>
-      <p class="figure-note">Includes contributions and independent expenditures in Redwood City City Council elections from 2018, 2020, 2022, and 2024.</p>
+      <p class="figure-note">Includes contributions and independent expenditures to city council elections in years 2018, 2020, 2022, and 2024.</p>
 
       <div class="bar-plot">
-        <p class="figure-callout">The three biggest spenders in recent elections are corporate landlords and real estate PACs.</p>
+        <p class="figure-callout">Four of the five biggest spenders in recent elections are corporate landlords and real estate PACs.</p>
         <div class="bar-row ig">
           <div class="bar-name">California Apartment Association PAC (CAAPAC)</div>
           <div class="bar-track"><div class="bar" style="--w: 91.35%;"><span class="bar-value">$41,105</span></div></div>
@@ -999,21 +1043,28 @@
       <p>The same landlord money that backed our council is now bankrolling the fight against renter protections.</p>
     </div>
 
-    <p class="opp-lede">Between 2018 and 2024, the three biggest spenders in council races put $81,100 into getting their candidates elected. In just over a month this fall, those same three interests have poured <strong>$150,000</strong> into defeating <span class="measure-tag">Measure E</span>, the ballot measure to strengthen renter protections in Redwood City.</p>
+    <p class="opp-lede">Between 2018 and 2024, the four biggest real estate spenders in council races put $97,922 into getting their candidates elected. In under two months this fall, those same four interests have poured <strong>$310,000</strong> into defeating <span class="measure-tag">Measure E</span>, the ballot measure to strengthen renter protections in Redwood City.</p>
 
     <figure class="spend-figure opp-figure" style="margin-left:0; margin-right:0;">
       <h3>Who's Funding the Opposition to Renter Protections</h3>
-      <p class="figure-note">Contributions to the committee opposing this year's Measure E, August 24 to September 26, 2026.</p>
+      <p class="figure-note">Contributions to the committee opposing this year's Measure E, August 10 to October 2, 2026.</p>
 
-      <p class="share-total"><strong>$150,000</strong>of $175,247 raised came from the big 3</p>
-      <div class="share-bar" role="img" aria-label="California Apartment Association 54%, California Association of Realtors 23%, Harbor Village and owner 9%, all other donors 14%">
-        <span class="seg-caa" style="width: 54.21%;">54%</span>
-        <span class="seg-car" style="width: 22.83%;">23%</span>
-        <span class="seg-hv" style="width: 8.56%;">9%</span>
-        <span class="seg-other" style="width: 14.41%;">14%</span>
+      <p class="share-total"><strong>$310,000</strong>of $341,279 raised came from the big 4</p>
+      <div class="share-bar" role="img" aria-label="National Association of Realtors 47%, California Apartment Association 28%, California Association of Realtors 12%, Harbor Village and owner 4%, all other donors 9%">
+        <span class="seg-nar" style="width: 46.88%;">47%</span>
+        <span class="seg-caa" style="width: 27.84%;">28%</span>
+        <span class="seg-car" style="width: 11.72%;">12%</span>
+        <span class="seg-hv" style="width: 4.40%;">4%</span>
+        <span class="seg-other" style="width: 9.17%;">9%</span>
       </div>
 
       <div class="opp-grid">
+        <div class="opp-card" style="--swatch: var(--ink);">
+          <h4>National Association of Realtors</h4>
+          <div class="opp-amount">$160,000</div>
+          <div class="opp-sub">against renter protections</div>
+        </div>
+
         <div class="opp-card" style="--swatch: var(--header);">
           <h4>California Apartment Association</h4>
           <div class="opp-amount">$95,000</div>
@@ -1026,16 +1077,17 @@
           <div class="opp-sub">against renter protections</div>
         </div>
 
-        <div class="opp-card" style="--swatch: var(--ink);">
+        <div class="opp-card" style="--swatch: var(--amber);">
           <h4>Harbor Village &amp; Its Owner</h4>
           <div class="opp-amount">$15,000</div>
           <div class="opp-sub">against renter protections</div>
         </div>
       </div>
 
-      <p class="others-note">The remaining $25,247 came from 10 other donors, most of them tied to real estate and property management.</p>
+      <p class="others-note">The remaining $31,279 came from 20 other donors, most of them tied to real estate and property management.</p>
     </figure>
   </section>
+
 
 
 </main>
