@@ -56,7 +56,7 @@
   }
 
   header h1 {
-    font-size: clamp(38px, 5.2vw, 64px);
+    font-size: clamp(40px, 6vw, 72px);
     line-height: 1.05;
     margin: 0 0 22px;
     font-weight: 900;
@@ -73,11 +73,11 @@
   }
 
   header p {
-    font-size: 26px;
+    font-size: 22px;
     max-width: 720px;
     opacity: 0.95;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.3;
   }
 
   .jump-bar {
@@ -140,7 +140,7 @@
   }
 
   .section-title {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(36px, 5.3vw, 55px);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -0.01em;
@@ -287,7 +287,7 @@
 
   .council-text p {
     font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    font-size: 50px;
+    font-size: clamp(36px, 5.3vw, 55px);
     font-weight: 900;
     letter-spacing: -0.01em;
     line-height: 1.15;
@@ -296,6 +296,17 @@
     color: var(--ink);
     padding: 0px 0px;
     text-shadow: 2px 2px 0 #d6d3cf;
+  }
+
+  .council-text .statement-lede {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0;
+    text-shadow: none;
+    color: var(--ink);
+    max-width: 720px;
+    margin: 16px 0 0 auto;
   }
 
   .council-text .source {
@@ -513,6 +524,13 @@
     margin-top: 8px;
   }
 
+  .figure-lede {
+    font-size: 17px;
+    line-height: 1.45;
+    margin: 6px 0 6px;
+    max-width: 720px;
+  }
+
   .figure-note {
     font-size: 12px;
     color: var(--muted);
@@ -570,7 +588,7 @@
 
   .amber-section {
     position: relative;
-    padding: 40px 0 64px;
+    padding: 80px 0 64px;
     margin-bottom: 0;
   }
 
@@ -745,6 +763,92 @@
 
   .closing strong { background: white; color: var(--header); padding: 0 4px; }
 
+  .cta {
+    position: relative;
+    margin-top: 64px;
+    padding: 56px 0 8px;
+    color: white;
+  }
+
+  .cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -64px;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--header) 0 12px,
+      #e0661f 12px 24px
+    );
+    z-index: -1;
+  }
+
+  .cta-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    max-width: 860px;
+  }
+
+  .cta-date {
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 0.9;
+    padding-right: 28px;
+    border-right: 4px solid white;
+  }
+
+  .cta-month {
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .cta-day {
+    display: block;
+    font-size: 96px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-lead {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+
+  .cta-hl {
+    background: white;
+    color: var(--header);
+    padding: 0 8px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .cta-sub {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .cta { margin-top: 44px; padding-top: 40px; }
+    .cta-row { gap: 16px; }
+    .cta-date { padding-right: 16px; border-right-width: 3px; }
+    .cta-month { font-size: 15px; }
+    .cta-day { font-size: 60px; }
+    .cta-lead { font-size: 24px; }
+    .cta-sub { font-size: 16px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .bar, .bar-value { transition: none; }
   }
@@ -752,10 +856,10 @@
   /* Mobile type scale */
   @media (max-width: 640px) {
     header { padding: 56px 6% 56px; }
-    header h1 { font-size: 35px; margin-bottom: 16px; }
-    header p { font-size: 19px; line-height: 1.25; }
-    .section-title { font-size: 25px; }
-    .council-text p { font-size: 30px; }
+    header h1 { font-size: 38px; margin-bottom: 16px; }
+    header p { font-size: 18px; line-height: 1.3; }
+    .section-title { font-size: 34px; }
+    .council-text p { font-size: 34px; }
     .opp-section .council-text { padding-top: 36px; }
   }
 
@@ -779,7 +883,7 @@
         The RWC City Council has taken <span class="hl">tens of thousands of dollars</span> from corporate landlords and real estate lobbyists.
       </h1>
       <p>
-        A grassroots measure to strengthen renter protections, Measure E, has fallen on deaf ears at city hall.
+        A grassroots measure to strengthen renter protections, Measure E, has fallen on deaf ears at city hall. The council's biggest donors are the real estate interests fighting it.
       </p>
     </div>
   </div>
@@ -789,7 +893,8 @@
 
   <section>
     <div class="council-section">
-      <h2 class="section-title"><span>Corporate landlords and the real estate lobby helped bankroll the RWC City Council.</span></h2>
+      <h2 class="section-title"><span>Which sitting councilmembers take the most money from the corporate landlord lobby?</span></h2>
+      <p class="section-lede">Real estate interests helped bankroll the RWC City Council.</p>
       <div class="council-grid">
 
         <!-- Template note: duplicate one .card block per councilmember. -->
@@ -966,17 +1071,17 @@
 
   <section class="amber-section">
     <div class="council-text">
-      <p>Out-of-town corporations own the vast majority of rental properties in our city<sup style="font-size: 0.45em; vertical-align: 0.85em;">$</sup>. Their lobbyists are our city's biggest campaign spenders.</p>
+      <p>Out-of-town corporations own the vast majority of rental properties in our city<sup style="font-size: 0.45em; vertical-align: 0.85em;">$</sup>. Their lobbyists are RWC's biggest campaign spenders.</p>
       <p class="source"><sup>$</sup> Anti-Eviction Mapping Project. 2024. "Who Owns Redwood City's Rental Housing?"</p>
     </div>
 
     <!-- Top spenders figure. Bar width = amount / 45,000 (the axis max). -->
     <figure class="spend-figure" id="spend-figure" style="margin-left:0; margin-right:0;">
-      <h3>Top 5 Spenders in Redwood City Council Elections: 2018 to 2024</h3>
-      <p class="figure-note">Includes contributions and independent expenditures to city council elections in years 2018, 2020, 2022, and 2024.</p>
+      <h3>Top 5 Spenders in Redwood City City Council Elections: 2018 to 2024</h3>
+      <p class="figure-note">Includes contributions and independent expenditures to city council elections in 2018, 2020, 2022, and 2024.</p>
 
       <div class="bar-plot">
-        <p class="figure-callout">Four of the five biggest spenders in recent elections are corporate landlords and real estate PACs.</p>
+        <p class="figure-callout">4 of the 5 biggest spenders in recent elections are corporate landlords and real estate PACs.</p>
         <div class="bar-row ig">
           <div class="bar-name">California Apartment Association PAC (CAAPAC)</div>
           <div class="bar-track"><div class="bar" style="--w: 91.35%;"><span class="bar-value">$41,105</span></div></div>
@@ -1086,8 +1191,20 @@
 
       <p class="others-note">The remaining $31,279 came from 20 other donors, most of them tied to real estate and property management.</p>
     </figure>
-  </section>
 
+    <div class="cta">
+      <div class="cta-row">
+        <div class="cta-date" aria-label="November 3">
+          <span class="cta-month">Nov</span>
+          <span class="cta-day">3</span>
+        </div>
+        <div>
+          <p class="cta-lead">Vote <span class="cta-hl">Yes on Measure E</span> in Redwood City.</p>
+          <p class="cta-sub">Stand with Redwood City renters, not the corporate PACs working against them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 </main>
