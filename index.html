@@ -888,6 +888,144 @@
     color: var(--muted);
   }
 
+  /* CAA donors figure: circles keep rank order but are NOT to scale, so labels fit inside */
+
+  .caa-figure { --bmax: 240px; }
+
+  .caa-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px 18px;
+    margin-top: 8px;
+    padding: 24px 16px 26px;
+    background: var(--panel);
+    border-radius: 8px;
+  }
+
+  .caa-bubble {
+    --size: calc(var(--d) * var(--bmax));
+    width: var(--size);
+    height: var(--size);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 calc(var(--size) * 0.12);
+    color: var(--ink);
+  }
+
+  .caa-break { flex-basis: 100%; height: 0; }
+
+  .caa-bubble h4 {
+    margin: 0 0 2px;
+    font-size: max(12px, calc(var(--size) * 0.075));
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  .caa-amt {
+    font-size: max(16px, calc(var(--size) * 0.115));
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .caa-units {
+    font-size: max(11px, calc(var(--size) * 0.062));
+    font-weight: 500;
+    margin-top: 1px;
+    white-space: nowrap;
+  }
+
+  .caa-key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  .caa-key strong { color: var(--ink); }
+
+  .caa-grid { border-radius: 8px 8px 0 0; }
+
+  /* Funnel: the panel narrows into a spout and ends in an arrowhead, all one shape */
+  .caa-figure { --fh: 90px; --sh: 44px; --ah: 24px; }
+
+  .caa-funnel {
+    width: 100%;
+    height: calc(var(--fh) + var(--sh) + var(--ah));
+    background: var(--panel);
+    clip-path: polygon(
+      0 0, 100% 0,
+      calc(50% + 11px) var(--fh),
+      calc(50% + 11px) calc(var(--fh) + var(--sh)),
+      calc(50% + 26px) calc(var(--fh) + var(--sh)),
+      50% 100%,
+      calc(50% - 26px) calc(var(--fh) + var(--sh)),
+      calc(50% - 11px) calc(var(--fh) + var(--sh)),
+      calc(50% - 11px) var(--fh)
+    );
+    margin-bottom: 8px;
+  }
+
+  /* A thin pipe out of the pool: a small share of the money, not all of it */
+  .caa-flow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .caa-dest {
+    width: 100%;
+    padding: 16px 20px;
+    background: var(--header);
+    color: white;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 var(--ink);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.15;
+  }
+
+  .caa-dest strong { font-size: 38px; font-weight: 900; letter-spacing: -0.01em; }
+  .caa-dest span { font-size: 19px; font-weight: 500; }
+
+  .caa-mark { font-size: 0.5em; vertical-align: 0.8em; margin-left: 2px; }
+
+  .caa-asof {
+    margin: 12px 0 0;
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 860px) {
+    .caa-figure { --bmax: 200px; }
+  }
+
+  @media (max-width: 480px) {
+    .caa-figure { --bmax: 170px; }
+    .caa-break { display: none; }
+    .caa-grid { gap: 10px 10px; padding: 18px 8px 20px; }
+    .caa-figure { --fh: 60px; --sh: 70px; }
+    .caa-dest strong { font-size: 30px; }
+    .caa-dest span { font-size: 17px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1136,13 +1274,13 @@
       <div class="glossary-grid">
         <div class="glossary-item">
           <h4>California Apartment Association PAC (CAAPAC)</h4>
-          <p>The California Apartment Association (CAA) is the state's biggest corporate landlord lobby group. Corporations with apartments in Redwood City have paid $60 million since 2015 into the CAA Issues PAC, which is now channeling its money to oppose Measure E.</p>
+          <p>The political action committee of California's largest landlord and property manager lobby, funded by its member corporations.</p>
         </div>
         
 
         <div class="glossary-item">
           <h4>California Real Estate PAC (CREPAC)</h4>
-          <p>The PAC of the California Association of Realtors, which poured at least $19 million into defeating Prop 33<sup style="font-size: 0.75em;">*</sup>, the statewide 2024 ballot measure that would have let cities expand rent control.</p>
+          <p>The California Association of Realtors' PAC, which poured at least $19 million into defeating Prop 33<sup style="font-size: 0.75em;">*</sup>, the statewide ballot measure that would have let cities expand rent control in 2024.</p>
         </div>
 
         <div class="glossary-item">
@@ -1166,7 +1304,7 @@
       <p>The same landlord money that backed the RWC council is now bankrolling the fight against renter protections.</p>
     </div>
 
-    <p class="opp-lede">Between 2018 and 2024, the four biggest real estate spenders in council races put $97,922 into getting their candidates elected. In under two months this fall, those same four interests have poured <strong>$310,000</strong> into defeating <span class="measure-tag">Measure E</span>, the ballot measure to strengthen renter protections in Redwood City.</p>
+    <p class="opp-lede">In under two months, these lobbyists have poured <strong>$310,000</strong> into misleading advertising in an attempt to defeat <span class="measure-tag">Measure E</span>.</p>
 
     <figure class="spend-figure opp-figure" style="margin-left:0; margin-right:0;">
       <h3>Who's Funding the Opposition to Renter Protections</h3>
@@ -1208,6 +1346,54 @@
       </div>
 
       <p class="others-note">The remaining $31,279 came from 20 other donors, most of them tied to real estate and property management.</p>
+    </figure>
+
+    <!-- CAA donors figure. Circles keep rank order but are not to scale. -->
+    <figure class="spend-figure opp-figure caa-figure" style="margin-left:0; margin-right:0;">
+      <h3>Who's Behind the California Apartment Association's $95,000?</h3>
+      <p class="figure-lede">Five corporations with apartments in Redwood City have paid <strong>$60 million</strong> since 2015 to the California Apartment Association, the state's biggest corporate landlord lobby group, which is now channeling its money into opposing Measure E.</p>
+      <div class="caa-key">
+        <span><strong>$ amount</strong> = money paid to the California Apartment Association since 2015</span>
+        <span><strong>Units</strong> = units owned or managed in Redwood City as of 2024</span>
+      </div>
+
+      <div class="caa-grid">
+        <div class="caa-bubble" style="--d: 1;">
+          <h4>Essex Property Trust</h4>
+          <div class="caa-amt">$32.4M</div>
+          <div class="caa-units">400 units</div>
+        </div>
+        <div class="caa-bubble" style="--d: 0.855;">
+          <h4>Equity Residential</h4>
+          <div class="caa-amt">$22.5M</div>
+          <div class="caa-units">701 units</div>
+        </div>
+        <div class="caa-break" aria-hidden="true"></div>
+        <div class="caa-bubble" style="--d: 0.585;">
+          <h4>Spieker Trust</h4>
+          <div class="caa-amt">$2.7M</div>
+          <div class="caa-units">300 units</div>
+        </div>
+        <div class="caa-bubble" style="--d: 0.55;">
+          <h4>AIMCO</h4>
+          <div class="caa-amt">$1.9M</div>
+          <div class="caa-units">582 units</div>
+        </div>
+        <div class="caa-bubble" style="--d: 0.51;">
+          <h4>Sares-Regis Group</h4>
+          <div class="caa-amt">$0.6M</div>
+          <div class="caa-units">192 units</div>
+        </div>
+      </div>
+
+      <div class="caa-flow">
+        <div class="caa-funnel" aria-hidden="true"></div>
+        <div class="caa-dest">
+          <strong>$95,000</strong>
+          <span>spent on Measure E opposition via the California Apartment Association</span>
+        </div>
+      </div>
+      <p class="caa-asof">Data as of October 14, 2026.</p>
     </figure>
 
     <div class="cta">
